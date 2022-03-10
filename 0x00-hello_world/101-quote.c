@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-	char oM[61] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	char oM[59] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
 	fwrite(&oM, 1, sizeof(oM), stderr);
 	return (1);
