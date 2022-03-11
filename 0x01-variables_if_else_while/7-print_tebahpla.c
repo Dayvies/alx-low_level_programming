@@ -15,7 +15,7 @@ int main(void)
 
 	int counter = 25;
 
-	while (counter => 0)
+	while (counter >= 0)
 	{
 		putchar(alphaBet[counter]);
 		counter--;
