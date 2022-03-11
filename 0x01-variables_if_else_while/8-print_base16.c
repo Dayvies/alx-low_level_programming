@@ -17,7 +17,7 @@ int main(void)
 
 	while (counter < 16)
 	{
-		putchar(alphaBet[counter]);
+		putchar(baseSixteen[counter]);
 		counter++;
 	}
 	putchar('\n');
