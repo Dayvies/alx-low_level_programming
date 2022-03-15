@@ -10,13 +10,23 @@ int main(void)
 {
 	int i = 0;
 
-	int sum = 0;
+	long int one = 1;
 
-	for (i = 0; i < 1024; i += 1)
+	long int two = 2;
+
+	long double sum = one + two;
+
+	long double sum2 = 0;
+
+	for (i = 0; i < 48; i += 1)
 	{
-		if ((i % 5) == 0 || (i % 3) == 0)
-			sum = sum + i;
+		sum = two + one;
+		if (sum > 4000000)
+			break;
+		one = two;
+		two = sum;
+		sum2 = sum2 + sum;
 	}
-	printf("%d\n", sum);
+	printf("%.0Lf\n", sum2);
 	return (0);
 }

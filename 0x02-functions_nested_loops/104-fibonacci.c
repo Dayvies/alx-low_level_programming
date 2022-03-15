@@ -10,21 +10,21 @@ int main(void)
 {
 	int i = 0;
 
-	long int one = 1;
+	long double one = 1;
 
-	long int two = 2;
+	long double two = 2;
 
 	long double sum = one + two;
 
-	printf("%ld, ", one);
-	printf("%ld, ", two);
+	printf("%.0Lf, ", one);
+	printf("%.0Lf, ", two);
 
-	for (i = 0; i < 48; i += 1)
+	for (i = 0; i < 96; i += 1)
 	{
 		sum = two + one;
 		one = two;
 		two = sum;
-		if (i == 47)
+		if (i == 95)
 		{
 			printf("%.0Lf", sum);
 			break;
