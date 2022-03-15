@@ -19,7 +19,7 @@ int main(void)
 	printf("%lu, ", one);
 	printf(", %lu", two);
 
-	for (i = 0; i < 91; i += 1)
+	for (i = 0; i < 89; i += 1)
 	{
 		sum = two + one;
 		one = two;
