@@ -22,13 +22,7 @@ int main(void)
 		if ((i % 5) == 0 || (i % 3) == 0)
 			sum = sum + i;
 	}
-	length = snprintf(NULL, 0, "%d", sum);
-       	*str = malloc(length + 1);
-	snprintf(str, length + 1, "%d", sum);
-	for (z = 0; z < length; z++)
-	{
-		_putchar(str[z]);
-	}
-	_putchar('\n');
+	printf("%d\n",sum)
+	
 	return (0);
 }
