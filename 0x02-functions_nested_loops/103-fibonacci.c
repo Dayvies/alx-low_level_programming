@@ -25,7 +25,8 @@ int main(void)
 			break;
 		one = two;
 		two = sum;
-		sum2 = sum2 + sum;
+		if ((sum % 2) == 0)
+			sum2 = sum2 + sum;
 	}
 	printf("%.0Lf\n", sum2);
 	return (0);
