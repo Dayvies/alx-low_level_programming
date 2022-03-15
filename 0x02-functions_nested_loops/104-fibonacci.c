@@ -8,29 +8,38 @@
  */
 int main(void)
 {
-	int i = 0;
+	unsigned long int i, m1, m2, n1, n2 = 0;
 
-	long double one = 1;
+	unsigned long int one = 1;
 
-	long double two = 2;
+	unsigned long int two = 2;
 
-	long double sum = one + two;
+	unsigned long int sum = one + two;
 
-	printf("%.0Lf, ", one);
-	printf("%.0Lf, ", two);
+	printf("%lu, ", one);
+	printf(", %lu", two);
 
-	for (i = 0; i < 96; i += 1)
+	for (i = 0; i < 90; i += 1)
 	{
 		sum = two + one;
 		one = two;
 		two = sum;
-		if (i == 95)
-		{
-			printf("%.0Lf", sum);
-			break;
-		}
-		printf("%.0Lf, ", sum);
+		printf(", %lu", sum);
 
+	}
+
+	m1 = one / 1000000000;
+	m2 = one % 1000000000;
+	n1 = two / 1000000000;
+	n2 = two / 1000000000;
+	for (i = 92; i < 99; i++)
+	{
+		printf(", %lu", n1 + (n2 / 1000000000));
+		printf(", %lu",  (n2 % 1000000000));
+		n1 = n1 + m1;
+		m1 = n1 - m1;
+		n2 = n2 + m2;
+		j2 = k2 - j2;
 	}
 	printf("\n");
 	return (0);
