@@ -21,11 +21,11 @@ int main(void)
 
 	for (i = 0; i < 90; i += 1)
 	{
+		printf(", %lu", sum);
 		sum = two + one;
 		one = two;
 		two = sum;
-		printf(", %lu", sum);
-
+		
 	}
 
 	m1 = one / 1000000000;
