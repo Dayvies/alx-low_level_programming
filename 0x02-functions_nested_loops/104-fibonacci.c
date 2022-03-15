@@ -16,7 +16,7 @@ int main(void)
 
 	unsigned long int sum = one + two;
 
-	printf("%lu, ", one);
+	printf("%lu", one);
 	printf(", %lu", two);
 
 	for (i = 0; i < 90; i += 1)
