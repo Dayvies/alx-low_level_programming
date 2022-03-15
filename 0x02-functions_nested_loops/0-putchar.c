@@ -1,4 +1,4 @@
-int _putchar(char c);
+#include "main.h"
 
 /* more headers should be here */
 
