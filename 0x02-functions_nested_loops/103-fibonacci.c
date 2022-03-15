@@ -16,7 +16,7 @@ int main(void)
 
 	long double sum = one + two;
 
-	long double sum2 = 0;
+	long double sum2 = 2;
 
 	for (i = 0; i < 48; i += 1)
 	{
@@ -26,7 +26,7 @@ int main(void)
 		one = two;
 		two = sum;
 		if (((int)sum % 2) == 0)
-			sum2 = sum2 + sum + 2;
+			sum2 = sum2 + sum;
 	}
 	printf("%.0Lf\n", sum2);
 	return (0);
