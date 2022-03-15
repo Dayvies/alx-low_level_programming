@@ -14,7 +14,7 @@ int main(void)
 
 	int two = 2;
 
-	unsigned long long int sum = one + two;
+	unsigned long int sum = one + two;
 
 	printf("%d, ", one);
 	printf("%d, ", two);
@@ -26,10 +26,10 @@ int main(void)
 		two = sum;
 		if (i == 47)
 		{
-			printf("%llu", sum);
+			printf("%lu", sum);
 			break;
 		}
-		printf("%llu, ", sum);
+		printf("%lu, ", sum);
 
 	}
 	printf("\n");
