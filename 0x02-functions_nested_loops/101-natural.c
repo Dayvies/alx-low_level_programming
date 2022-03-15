@@ -4,16 +4,11 @@
 
 /**
  * main - check the code
- * 
  * Return: Always 0
  */
 int main(void)
 {
 	int i = 0;
-
-	int z = 0;
-
-	int length = 0;
 
 	int sum = 0;
 
@@ -22,7 +17,6 @@ int main(void)
 		if ((i % 5) == 0 || (i % 3) == 0)
 			sum = sum + i;
 	}
-	printf("%d\n",sum)
-	
+	printf("%d\n", sum);
 	return (0);
 }
