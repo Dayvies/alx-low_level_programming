@@ -26,7 +26,7 @@ void print_number(int n)
 	{
 		i = n1 / j;
 		_putchar(i + '0');
-		ni = n1 % j;
+		n1 = n1 % j;
 		j = j / 10;
 	}
 }
