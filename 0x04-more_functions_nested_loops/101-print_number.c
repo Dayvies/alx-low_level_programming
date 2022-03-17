@@ -8,6 +8,8 @@
  */
 void print_number(int n)
 {
+	unsigned int n1;
+
 	int i = 0;
 
 	int j = 1;
@@ -17,13 +19,14 @@ void print_number(int n)
 		_putchar('-');
 		n = n * -1;
 	}
-	while ((n / j) >= 10)
+	n1 = n;
+	while ((n1 / j) >= 10)
 		j = j * 10;
 	while (j >= 1)
 	{
-		i = n / j;
+		i = n1 / j;
 		_putchar(i + '0');
-		n = n % j;
+		ni = n1 % j;
 		j = j / 10;
 	}
 }
