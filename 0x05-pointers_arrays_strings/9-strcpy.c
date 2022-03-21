@@ -7,7 +7,7 @@
  * Return: 0
  * On error, 0 is returned, and errno is set appropriately.
  */
-char *_strcpy(char *dest, char *src) 
+char *_strcpy(char *dest, char *src)
 {
 	int counter = 0;
 
