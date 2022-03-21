@@ -15,7 +15,7 @@ int _atoi(char *s)
 
 	int sign = 1;
 
-	int integer = 0;
+	unsigned int integer = 0;
 
 	length = get_length(s);
 
@@ -31,10 +31,10 @@ int _atoi(char *s)
 			if (numstart == 1)
 				break;
 			if (numstart == 0 && s[i] == '-')
-				sign = -1;
+				sign = sign * -1;
 			else
 			{
-				sign = 1;
+				sign = sign * 1;
 			}
 		}
 	}
