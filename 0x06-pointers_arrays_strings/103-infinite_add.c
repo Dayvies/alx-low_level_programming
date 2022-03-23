@@ -3,12 +3,12 @@ int get_length(char *str);
 void reverse_arr(char *r);
 
 /**
- * infinite_add:add loong numbers 
+ * infinite_add-add loong numbers
  * @n1 : string
  * @n2 : string
  * @r  : result string
- * @size_r: size of r
- * Return: string 
+ * @size_r : size of r
+ * Return: string
  * On error, 0 is returned, and errno is set appropriately.
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
@@ -20,7 +20,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	b = get_length(n1);
 	x = get_length(n2);
 	if (size_r <= x + 1 || size_r <= b + 1)
-		return 0;
+		return (0);
 	j = x - 1;
 	i = b - 1;
 	for (z = 0; z < x || z < b; z++)
@@ -44,7 +44,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	if (carry == 1)
 	{
 		r[z] = carry + '0';
-		r[z+1] = '\0';
+		r[z + 1] = '\0';
 	}
 	reverse_arr(r);
 	return (r);
@@ -66,7 +66,7 @@ int get_length(char *str)
 	return (counter);
 }
 /**
- * reverse_array- check length of string
+ * reverse_arr- check length of string
  * @r : string
  * Return: void
  * On error, 0 is returned, and errno is set appropriately.
