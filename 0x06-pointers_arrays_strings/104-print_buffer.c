@@ -18,7 +18,7 @@ void print_buffer(char *b, int size)
 	}
 	for (mbuff = 0; mbuff < size; mbuff += 10)
 	{
-		printf("%08x :", mbuff);
+		printf("%08x: ", mbuff);
 		for (i = mbuff; i < mbuff + 10; i++)
 		{
 			if (i > size - 1)
@@ -35,8 +35,8 @@ void print_buffer(char *b, int size)
 			if (b[m] >= 32 && b[m] <= 126)
 				putchar(b[m]);
 			else
-				putchar('.');
-		}
+			putchar('.');
+	}
 		printf("\n");
 	}
 }
