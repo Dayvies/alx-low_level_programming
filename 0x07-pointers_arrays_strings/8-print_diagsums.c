@@ -1,29 +1,31 @@
-#include "main.h"
-
+#include "holberton.h"
+#include <stdio.h>
 /**
- * print_diagsums - gets diagonal sums
- * @a : source
- * @size : square root of source
- * Return: void
- * On error, 0 is returned, and errno is set appropriately.
- */
+ *print_diagsums - prints sum of 2 diagonals of a square
+ *@a: pointer to array
+ *@size: sie of array
+ *
+ *Return: void
+*/
 void print_diagsums(int *a, int size)
 {
-	unsigned int sum = 0;
-	unsigned int sum2 = 0;
-	int i, j, size1;
+	int i, size1;
+	unsigned int sum1, sum2;
+
+	size1 = 0;
+	sum1 = 0;
+	sum2 = 0;
 
 	size1 = (size * size) - 1;
-	for (i = 0; i <= size1 && size > 0; )
+
+	for (i = 0; i <= size1; i = i + (size + 1))
 	{
-		sum = sum + a[i];
-		i = i + size + 1;
+		sum1 = sum1 + a[i];
 	}
-	for (j = size -1; j < size1 && size > 0; )
+	for (i = (size - 1); i < size1; i = i + (size - 1))
 	{
-		sum2 = sum2 + a[j];
-		j = j + size - 1;
+		sum2 = sum2 + a[i];
 	}
-	printf("%u, %u\n", sum, sum2);
+	printf("%d, %d\n", sum1, sum2);
 }
 
