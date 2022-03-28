@@ -14,12 +14,12 @@ void print_diagsums(int *a, int size)
 	unsigned int count =0;
 	int i,j;
 
-	for (i = 0; i < (size * size); )
+	for (i = 0; i < (size * size) && size > 0; )
 	{
 		sum = sum + a[i];
 		i = i + size + 1;
 	}
-	for (j = size -1; j < (size * size); )
+	for (j = size -1; j < (size * size) && size > 0; )
 	{
 		sum2 = sum2 + a[j];
 		count = count + 1;
