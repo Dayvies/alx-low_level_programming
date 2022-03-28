@@ -1,5 +1,5 @@
-#include "holberton.h"
-#include <stdio.h>
+#include "main.h"
+
 /**
  *print_diagsums - prints sum of 2 diagonals of a square
  *@a: pointer to array
