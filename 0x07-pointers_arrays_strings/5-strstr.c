@@ -34,7 +34,7 @@ char *_strstr(char *haystack, char *needle)
 				count = 0;
 			}
 			if (count == nLength)
-				return (haystack + i);
+				return (&haystack[i]);
 			j++;
 		}
 	}
