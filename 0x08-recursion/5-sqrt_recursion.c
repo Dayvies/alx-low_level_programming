@@ -12,7 +12,7 @@ int _sqrt_recursion(int n)
 		return (-1);
 	if (n == 1)
 		return (1);
-	return (sqrtt(n, n / 2));
+	return (sqrtt(n, 0));
 }
 /**
  * sqrtt - find sqrt slow way
@@ -23,7 +23,7 @@ int _sqrt_recursion(int n)
  */
 int sqrtt(int x, int y)
 {
-	if (y <= 0)
+	if (y >= x)
 		return (-1);
 	if (y * y == x)
 		return (y);
