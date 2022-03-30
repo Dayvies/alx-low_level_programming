@@ -14,7 +14,7 @@ int is_palindrome(char *s)
 	int j = 0;
 
 	j = getlength(s, i);
-	return _checkpalin(s, i, j - 1, j / 2);
+	return (_checkpalin(s, i, j - 1, j / 2));
 }
 /**
  * getlength - determines length
