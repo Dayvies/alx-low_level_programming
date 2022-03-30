@@ -26,10 +26,6 @@ int _printchar(char *c, int i)
 	{
 		return (i);
 	}
-
-	if (_printchar(c, i + 1) >= i)
-		return (_printchar(c, i + 1));
-	else
-		return (0);
+	return (_printchar(c, i + 1));
 
 }
