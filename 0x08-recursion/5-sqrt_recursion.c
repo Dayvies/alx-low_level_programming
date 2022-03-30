@@ -28,5 +28,5 @@ int sqrtt(int x, int y)
 	if (y * y == x)
 		return (y);
 	else
-		return (sqrtt(x, y - 1));
+		return (sqrtt(x, y + 1));
 }
