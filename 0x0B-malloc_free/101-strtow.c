@@ -12,11 +12,11 @@ char **strtow(char *str)
 	int i = 0, j, count = 0, st = -1, z;
 	char **arr;
 
-	if (str == NULL || str == "")
+	if (str == NULL)
 		return (NULL);
 	count = county(str);
 	arr = (char **) malloc(sizeof(char *) * count);
-	if ( arr == NULL)
+	if ( arr == NULL || count == 0)
 		return (NULL);
 	for (j = 0 ; str[j] != '\0' && i < count; j++)
 	{
@@ -43,7 +43,7 @@ char **strtow(char *str)
 	}
 	arr[i] = (char *) malloc(1 * 1);
 	if ( arr[i] == NULL)
-		return (NULL)
+		return (NULL);
 	arr[i] = NULL;
 	return (arr);
 }
