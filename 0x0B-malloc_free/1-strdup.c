@@ -13,8 +13,8 @@ char *_strdup(char *str)
 
 	while (str[i])
 	i++;
-	p = malloc(sizeof(char) * i);
-	if (p == NULL)
+	p = malloc(sizeof(char) * (i + 1));
+	if (p == NULL || i <= 0)
 		return (NULL);
 	for (j = 0; j <= i; j++)
 	{
