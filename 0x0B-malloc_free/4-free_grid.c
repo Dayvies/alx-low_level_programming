@@ -2,8 +2,8 @@
 
 /**
  * free_grid - frees grid
- * @grid - the grid
- * @height - the height
+ * @grid : the grid
+ * @height : the height
  * Return: nothing
  */
 void free_grid(int **grid, int height)
