@@ -2,8 +2,8 @@
 
 /**
  * argstostr - concatenates arguments of program
- * @ac : number of arguments 
- * @av : arguments 
+ * @ac : number of arguments
+ * @av : arguments
  * Return: a pointer to a new string, or NULL if it fails
  */
 char *argstostr(int ac, char **av)
@@ -11,12 +11,12 @@ char *argstostr(int ac, char **av)
 	int i, j, z = 0;
 	char *p;
 
-	if(ac == 0 || av == NULL)
+	if (ac == 0 || av == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
 		j = 0;
-		while(av[i][j])
+		while (av[i][j])
 			j++;
 		z = j + z + 1;
 	}
@@ -27,7 +27,7 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 	{
 		j = 0;
-		while(av[i][j])
+		while (av[i][j])
 		{
 			p[z] = av[i][j];
 			j++;
