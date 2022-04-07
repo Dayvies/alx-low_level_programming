@@ -7,7 +7,7 @@ void mul(char *s1, int dig2, int len1, int i, int *res, int *hold, int len);
  * main - main program
  * @argc : number of args
  * @argv : arguments
- * Return : o
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
