@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
  * @len : length of result array
  * Return : Nothing
  */
-void mul(char *s1, int dig2, int len1 , int i, int *res, int *hold, int len)
+void mul(char *s1, int dig2, int len1, int i, int *res, int *hold, int len)
 {
 	int j, dig1, len2, jstart, carryh = 0, carryR = 0;
 
