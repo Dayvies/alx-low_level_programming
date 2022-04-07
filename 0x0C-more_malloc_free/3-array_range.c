@@ -2,8 +2,8 @@
 
 /**
  * array_range - array of integers from min to max
- * @min - minimum number
- * @max - maximum number
+ * @min : minimum number
+ * @max : maximum number
  * Return: pointer to int array
  */
 int *array_range(int min, int max)
