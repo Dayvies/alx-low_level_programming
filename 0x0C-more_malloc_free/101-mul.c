@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int get_length(char *str);
-void mul(char *s1, int dig2 ,int len1 , int i, int *res, int *hold, int len);
+void mul(char *s1, int dig2, int len1, int i, int *res, int *hold, int len);
 /**
  * main - main program
  * @argc : number of args
@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 {
 	int i = 0, z, w = 0, len1, len2, len, *res, *hold, dig2;
 	char *s;
-    
+
 	s = "Error";
 	len1 = get_length(argv[1]);
 	len2 = get_length(argv[2]);
@@ -32,10 +32,10 @@ int main(int argc, char *argv[])
 	for (i = len2 - 1; i >= 0; i--)
 	{
 		dig2 = argv[2][i] - '0';
-		mul (argv[1], dig2, len1, i, res, hold, len);
+		mul(argv[1], dig2, len1, i, res, hold, len);
 	}
 	for (z = 0; z < len; z++)
-	{	
+	{
 		if (w == 0 && res[z] == 0 && z != len - 1)
 			continue;
 		_putchar(res[z] + '0');
@@ -57,11 +57,11 @@ int main(int argc, char *argv[])
  * @len : length of result array
  * Return : Nothing
  */
-void mul(char *s1, int dig2 ,int len1 , int i, int *res, int *hold, int len)
+void mul(char *s1, int dig2, int len1 , int i, int *res, int *hold, int len)
 {
 	int j, dig1, len2, jstart, carryh = 0, carryR = 0;
 
-	len2 = len - len1 -1;
+	len2 = len - len1 - 1;
 	jstart = len - (len2 - i);
 	for (j = 0; j < len; j++)
 		hold[j] = 0;
@@ -74,7 +74,7 @@ void mul(char *s1, int dig2 ,int len1 , int i, int *res, int *hold, int len)
 	}
 	if (carryh > 0)
 		hold[jstart] = carryh;
-	for (j = len -1; j >= 0; j--)
+	for (j = len - 1; j >= 0; j--)
 	{
 		dig1 = hold[j] + res[j] + carryR;
 		if (dig1 == 0)
