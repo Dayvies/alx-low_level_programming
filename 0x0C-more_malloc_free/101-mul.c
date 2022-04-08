@@ -25,7 +25,11 @@ int main(int argc, char *argv[])
 	}
 	len = len1 + len2 + 1;
 	res = malloc(sizeof(int) * len);
+	if (res == NULL)
+		return (NULL);
 	hold = malloc(sizeof(int) * len);
+	if (hold == NULL)
+		return (NULL);
 	for (i = 0; i < len; i++)
 		res[i] = 0;
 	for (i = len2 - 1; i >= 0; i--)
