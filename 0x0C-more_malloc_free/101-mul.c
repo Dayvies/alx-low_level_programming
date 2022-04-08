@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 int get_length(char *str);
 void mul(char *s1, int dig2, int len1, int i, int *res, int *hold, int len);
