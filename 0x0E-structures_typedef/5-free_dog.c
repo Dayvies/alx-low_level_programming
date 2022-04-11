@@ -2,7 +2,7 @@
 
 /**
  * free_dog - free struct of dog
- * @d - pointer
+ * @d : pointer
  * Return: void
  */
 void free_dog(dog_t *d)

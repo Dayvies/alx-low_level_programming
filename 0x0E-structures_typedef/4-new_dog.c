@@ -3,16 +3,16 @@ int get_length(char *s);
 
 /**
  * new-dog - create new dog, store name and owner
- * @name - name 
- * @age - age 
- * @owner - owner
+ * @name : name
+ * @age : age
+ * @owner : owner
  * Return: pointer to new-dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	int i, len1, len2;
-
 	dog_t *dog;
+
 	dog = malloc(sizeof(dog_t));
 	if (dog == NULL)
 		return (NULL);
@@ -31,18 +31,18 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(dog->name);
 		return (NULL);
 	}
-	for(i = 0; i < len1; i++)
+	for (i = 0; i < len1; i++)
 		dog->name[i] = name[i];
 	dog->name[i] = '\0';
-	for(i = 0; i < len2; i++)
+	for (i = 0; i < len2; i++)
 		dog->owner[i] = owner[i];
 	dog->owner[i] = '\0';
 	dog->age = age;
-	return (dog);	
+	return (dog);
 }
 /**
  * get_length - get length
- * @s - string
+ * @s: string
  * Return: length
  */
 int get_length(char *s)
