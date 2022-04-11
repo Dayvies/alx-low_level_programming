@@ -2,7 +2,7 @@
 int get_length(char *s);
 
 /**
- * new-dog - create new dog, store name and owner
+ * new_dog - create new dog, store name and owner
  * @name : name
  * @age : age
  * @owner : owner
