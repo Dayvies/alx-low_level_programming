@@ -4,11 +4,11 @@
  * array_iterator- performs an action to an array
  * @array: the array
  * @size: the array size
- * @action: function 
+ * @action: function
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	long unsigned int i = 0;
+	unsigned int i = 0;
 
 	if (!array || !action)
 		return;
