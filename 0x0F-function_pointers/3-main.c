@@ -17,15 +17,15 @@ int main (int argc , char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if ((argv[2][0] == '/' || argv[2][0] == '%') && b == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
 	if (get_op_func(argv[2]) == NULL)
 	{
 		printf("Error\n");
 		exit(99);
+	}
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && b == 0)
+	{
+		printf("Error\n");
+		exit(100);
 	}
 	result = (*get_op_func(argv[2]))(a, b);
 	printf("%d\n", result);
