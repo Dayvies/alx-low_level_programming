@@ -23,6 +23,7 @@ int main (int argc , char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
+	x = *argv[2];
 	if ((x == '/' || x == '%') && b == 0)
 	{
 		printf("Error\n");
