@@ -2,7 +2,7 @@
 
 /**
  * int_index -  returns the index of the first element that meets condition
- * @array: the array of int 
+ * @array: the array of int
  * @size: size of array
  * @cmp: function pointer
  * Return: int
