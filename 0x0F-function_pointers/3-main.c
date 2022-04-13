@@ -25,7 +25,7 @@ int main (int argc , char *argv[])
 	if (get_op_func(argv[2]) == NULL)
 	{
 		printf("Error\n");
-		exit(100);
+		exit(99);
 	}
 	result = (*get_op_func(argv[2]))(a, b);
 	printf("%d\n", result);
