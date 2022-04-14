@@ -21,20 +21,21 @@ void print_all(const char *const format, ...)
 	va_list list;
 
 	va_start(list, format);
-	while (ops[j].type)
+	while (format[i] && format)
 	{
 		j = 0;
-		while (format[i] && format)
+		while (ops[j].type)
 		{
 			if (format[i] == ops[j].type)
 			{
 				printf("%s", sep);
 				sep = ", ";
 				ops[j].f(list);
+				break;
 			}
-			i++;
+			j++;
 		}
-		j++;
+		i++;
 	}
 	va_end(list);
 	printf("\n");
