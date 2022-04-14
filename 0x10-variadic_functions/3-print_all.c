@@ -21,10 +21,10 @@ void print_all(const char *const format, ...)
 	va_list list;
 
 	va_start(list, format);
-	while (format[i] && format)
+	while (ops[j].type)
 	{
 		j = 0;
-		while (ops[j].type)
+		while (format[i] && format)
 		{
 			if (format[i] == ops[j].type)
 			{
@@ -32,9 +32,9 @@ void print_all(const char *const format, ...)
 				sep = ", ";
 				ops[j].f(list);
 			}
-			j++;
+			i++;
 		}
-		i++;
+		j++;
 	}
 	va_end(list);
 	printf("\n");
