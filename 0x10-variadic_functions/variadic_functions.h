@@ -8,7 +8,7 @@ int sum_them_all(const unsigned int n, ...);
 /**
  * struct op - Struct op
  *
- * @op: The operator
+ * @type: The operator
  * @f: The function associated
  */
 typedef struct op
