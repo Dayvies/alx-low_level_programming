@@ -9,8 +9,6 @@ size_t print_listint_safe(const listint_t *head)
 {
 	long int diff = 0, num = 0;
 
-	if (head == NULL)
-		return (98);
 	while (head)
 	{
 		num++;
