@@ -7,7 +7,8 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	long int diff = 0, num = 0;
+	long int diff = 0;
+	size_t num = 0;
 
 	while (head)
 	{
