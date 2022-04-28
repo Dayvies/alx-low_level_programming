@@ -30,7 +30,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 		mul = mul * 2;
 	}
 	if (index >= 64)
-		return (0);
+		return (-1);
 	*n = sum;
 	return (1);
 }
