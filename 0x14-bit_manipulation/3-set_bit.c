@@ -29,7 +29,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 		sum += x[i] * mul;
 		mul = mul * 2;
 	}
-	if (index >= 64)
+	if (index > 64)
 	{
 		*n = 0;
 		return (0);
