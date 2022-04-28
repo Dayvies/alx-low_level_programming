@@ -30,7 +30,10 @@ int set_bit(unsigned long int *n, unsigned int index)
 		mul = mul * 2;
 	}
 	if (index >= 64)
+	{
+		*n = 0;
 		return (0);
+	}
 	*n = sum;
 	return (1);
 }
