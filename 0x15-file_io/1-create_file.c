@@ -23,7 +23,7 @@ int create_file(const char *filename, char *text_content)
 		return (1);
 	wr = write(fd,text_content,buffsize);
 	close(fd);
-	if (wr == -1)
+	if (wr != (int) buffsize)
 		return (-1);
 	return (1);
 }
