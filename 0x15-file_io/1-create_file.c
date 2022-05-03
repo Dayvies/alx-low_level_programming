@@ -17,6 +17,8 @@ int create_file(const char *filename, char *text_content)
 	fd = open(filename, O_CREAT | O_WRONLY | O_EXCL, 0600);
 	close(fd);
 	fd = open(filename, O_WRONLY | O_TRUNC);
+	if (fd < 0)
+		return (-1);
 	while (text_content[buffsize])
 		buffsize++;
 	if (buffsize == 0)
