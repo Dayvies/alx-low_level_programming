@@ -16,4 +16,5 @@ for i in range(1, 1000):
             ind += -1
         if palinc == True:
             palin.append(a)
-print(palin[-5:])
+print(palin[-20:])
+print(max(palin))
