@@ -10,23 +10,27 @@ void print_arr(int *array, size_t l, size_t r);
  */
 int exponential_search(int *array, size_t size, int value)
 {
-	size_t bound = 1,sizet;
+	size_t b = 1, sizet;
 
-	while (bound < size && array[bound] < value)
+	if (!array || size == 0)
+		return (-1);
+
+	while (b < size && array[b] < value)
 	{
-		printf("Value checked array[%ld] = [%d]\n", bound, array[bound]);
-		    bound *= 2;
+		printf("Value checked array[%ld] = [%d]\n", b, array[b]);
+		b *= 2;
 	}
-	if (bound >= size)
+	if (b >= size)
 		sizet = size - 1;
 	else
-		sizet = bound;
-	return binary_search2(array, bound / 2, sizet, value);
+		sizet = b;
+	return (binary_search2(array, b / 2, sizet, value));
 }
 /**
- * binary_seach - binary search algorithm
+ * binary_search2 - binary search algorithm
  * @array: the array
- * @size: size
+ * @l: low
+ * @r: r
  * @value: value
  * Return: int
  */
