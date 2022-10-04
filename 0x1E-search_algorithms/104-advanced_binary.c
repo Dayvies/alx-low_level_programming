@@ -30,7 +30,7 @@ int binary_search3(int *array, size_t l, size_t r, int value)
 {
 	size_t m;
 
-	if (r <= l)
+	if (r == l)
 	{
 		if (array[l] != value)
 			return (-1);
