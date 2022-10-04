@@ -4,7 +4,7 @@
  * @array: the array
  * @size: size
  * @value: search Value
- * Return : int
+ * Return: int
  */
 int jump_search(int *array, size_t size, int value)
 {
