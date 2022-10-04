@@ -6,7 +6,7 @@ void print_arr(int *array, size_t l, size_t r);
  * @array : the array
  * @size : size
  * @value: value
- * Returns: int
+ * Return: int
  */
 int advanced_binary(int *array, size_t size, int value)
 {
@@ -16,12 +16,13 @@ int advanced_binary(int *array, size_t size, int value)
 	r = size - 1;
 	if (!array || size <= 0)
 		return (-1);
-	return binary_search3(array, l, r, value);
+	return (binary_search3(array, l, r, value));
 }
 /**
- * binary_seach - binary search algorithm
+ * binary_search3 - binary search algorithm
  * @array: the array
- * @size: size
+ * @r: r
+ * @l: l
  * @value: value
  * Return: int
  */
@@ -29,26 +30,25 @@ int binary_search3(int *array, size_t l, size_t r, int value)
 {
 	size_t m;
 
-	if (r <= l )
+	if (r <= l)
 	{
 		if (array[l] != value)
 			return (-1);
 		return (l);
 	}
 	print_arr(array, l, r);
-	
+
 	m = ((l + r) / 2);
 	if (array[m] < value)
 	{
 		l = m + 1;
 		return (binary_search3(array, l, r, value));
 	}
-	else 
+	else
 	{
 		r = m;
 		return (binary_search3(array, l, r, value));
 	}
-	
 }
 /**
  * print_arr - print array
