@@ -8,7 +8,7 @@
  */
 skiplist_t *linear_skip(skiplist_t *list, int value)
 {
-	skiplist_t *current, *previous;
+	skiplist_t *current, *previous, *temp;
 	size_t a, b;
 
 	if (list == NULL)
@@ -20,8 +20,12 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 	{
 		if (!current->express)
 		{
-			b = current->index - previous->index + current->index - 1;
 			a = current->index;
+			temp = current;
+			while (temp->next)
+				temp = temp->next;
+			b = temp->index;
+			previous = current;
 			break;
 		}
 		previous = current;
