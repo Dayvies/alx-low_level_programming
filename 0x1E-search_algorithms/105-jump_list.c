@@ -21,7 +21,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	current = list;
 	previous = current;
 	current = getNode(current, b);
-	printf("Value checked array[%ld] = [%d]\n", b, current->n);
+	printf("Value checked at index [%ld] = [%d]\n", b, current->n);
 
 	while (current->n < value)
 	{
@@ -37,7 +37,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 			break;
 		}
 		current = getNode(current, b);
-		printf("Value checked at index %ld] = [%d]\n", b, current->n);
+		printf("Value checked at index [%ld] = [%d]\n", b, current->n);
 	}
 	printf("Value found between indexes [%ld] and [%ld]\n", a, b);
 	while (a != b + 1)
